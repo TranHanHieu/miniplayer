@@ -174,9 +174,9 @@ class _MiniplayerState extends State<Miniplayer> with TickerProviderStateMixin {
               Align(
                 alignment: Alignment.bottomRight,
                 child: SizedBox(
-                  height: height - 32,
+                  height: height - (bottom != 0 ? 32 : 0),
                   width: (height * 16 / 9) - 57,
-                  child: GestureDetector(
+                  child: GestureDetector( 
                     child: ValueListenableBuilder(
                       valueListenable: dragDownPercentage,
                       builder:
